@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.myapp.controllers.StudentController"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <!-- En-tête -->
+    <top>
+        <Label text="Gestion des Étudiants" 
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </Label>
+    </top>
+
+    <!-- Formulaire à gauche -->
+    <left>
+        <VBox spacing="15.0" style="-fx-padding: 20;">
+            <Label text="Formulaire" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            
+            <Label text="Nom :"/>
+            <TextField fx:id="txtNom" promptText="Entrez le nom"/>
+            
+            <Label text="Prénom :"/>
+            <TextField fx:id="txtPrenom" promptText="Entrez le prénom"/>
+            
+            <Label text="Classe :"/>
+            <ComboBox fx:id="comboClasse" promptText="Sélectionnez une classe" prefWidth="200.0"/>
+            
+            <HBox spacing="10.0" style="-fx-padding: 10 0 0 0;">
+                <Button fx:id="btnAjouter" text="Ajouter" style="-fx-pref-width: 90px;"/>
+                <Button fx:id="btnModifier" text="Modifier" style="-fx-pref-width: 90px;"/>
+                <Button fx:id="btnSupprimer" text="Supprimer" style="-fx-pref-width: 90px;"/>
+            </HBox>
+            
+            <Button fx:id="btnRetour" text="Retour à l'accueil" 
+                    style="-fx-pref-width: 200px; -fx-padding: 5 0 5 0;"/>
+        </VBox>
+    </left>
+
+    <!-- Tableau à droite -->
+    <center>
+        <VBox spacing="10.0" style="-fx-padding: 20;">
+            <Label text="Liste des Étudiants" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            
+            <TableView fx:id="tableEtudiants" prefHeight="400.0">
+                <columns>
+                    <TableColumn fx:id="colNom" text="Nom" prefWidth="200.0"/>
+                    <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="200.0"/>
+                    <TableColumn fx:id="colClasse" text="Classe" prefWidth="200.0"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>
+
