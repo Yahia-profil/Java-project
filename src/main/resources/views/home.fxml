@@ -6,23 +6,37 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
 
 <StackPane xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.myapp.controllers.HomeController"
-           prefHeight="400.0" prefWidth="600.0">
+           prefHeight="500.0" prefWidth="700.0"
+           style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);">
 
-    <VBox alignment="CENTER" spacing="20.0">
-        <Label fx:id="welcomeLabel" text="Bienvenue" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <VBox alignment="CENTER" spacing="30.0">
+        <Label fx:id="welcomeLabel" 
+               text="Système de Gestion Scolaire" 
+               style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);"/>
         
-        <HBox spacing="10.0" alignment="CENTER">
-            <Button fx:id="btnGestionEtudiants" text="Gestion des Étudiants" 
-                    style="-fx-font-size: 14px; -fx-pref-width: 200px; -fx-pref-height: 40px;"/>
+        <Label text="Bienvenue dans votre application de gestion" 
+               style="-fx-font-size: 16px; -fx-text-fill: rgba(255,255,255,0.9);"/>
+        
+        <HBox spacing="15.0" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+            <Button fx:id="btnGestionEtudiants" 
+                    text="📚 Gestion des Étudiants" 
+                    style="-fx-font-size: 16px; 
+                           -fx-pref-width: 250px; 
+                           -fx-pref-height: 50px;
+                           -fx-background-color: #ffffff;
+                           -fx-text-fill: #667eea;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 25px;
+                           -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);"/>
         </HBox>
     </VBox>
 
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
     </padding>
 </StackPane>
-
